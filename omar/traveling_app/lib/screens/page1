@@ -1,0 +1,151 @@
+import 'package:traveling_app/categories_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'dart:ui';
+
+import '../utils.dart';
+
+class Scene1 extends StatefulWidget {
+  const Scene1({super.key});
+  @override
+  _Scene1State createState() => _Scene1State();
+}
+
+class _Scene1State extends State<Scene1> {
+  @override
+  void initState() {
+    super.initState();
+
+    // Attendez pendant 2 secondes, puis naviguez vers la scène 2
+    Future.delayed(Duration(seconds: 6), () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => CategoriesScreen()),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double baseWidth = 390;
+    double fem = MediaQuery.of(context).size.width / baseWidth;
+    double ffem = fem * 0.97;
+    return Container(
+      width: double.infinity,
+      child: TextButton(
+        // page1N7N (1:2)
+        onPressed: () {},
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+        ),
+        child: Container(
+          padding: EdgeInsets.fromLTRB(19 * fem, 5 * fem, 22 * fem, 5 * fem),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color(0xfff7960f),
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage(
+                'assets/page-1/images/page1-bg.png',
+              ),
+            ),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                // WWQ (1:9)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 28 * fem, 0 * fem),
+                child: Text(
+                  '22:06',
+                  style: SafeGoogleFont(
+                    'Poppins',
+                    fontSize: 20 * ffem,
+                    fontWeight: FontWeight.w400,
+                    height: 1.5 * ffem / fem,
+                    color: Color(0xff000000),
+                  ),
+                ),
+              ),
+              Container(
+                // autogroupgbgyZDn (6dxW18zkrf4ZwGFgHGgbGY)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 323 * fem, 5 * fem, 0 * fem),
+                padding:
+                    EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 353 * fem),
+                width: 192 * fem,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      // logoministereT4G (14:261)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 1 * fem, 0 * fem),
+                      width: 75 * fem,
+                      height: 76 * fem,
+                      child: Image.asset(
+                        'assets/page-1/images/logoministere.png',
+                      ),
+                    ),
+                    Container(
+                      // vvoyagecomkp4 (4:10)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 0 * fem, 350 * fem),
+                      child: Text(
+                        'V_voyage.com',
+                        style: SafeGoogleFont(
+                          'Poppins',
+                          fontSize: 24 * ffem,
+                          fontWeight: FontWeight.w700,
+                          height: 1.5 * ffem / fem,
+                          color: Color(0xff000000),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                // vector3fAL (1:4)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 6 * fem, 4.28 * fem, 0 * fem),
+                width: 19.72 * fem,
+                height: 13.81 * fem,
+                child: Image.asset(
+                  'assets/page-1/images/vector3.png',
+                  width: 19.72 * fem,
+                  height: 13.81 * fem,
+                ),
+              ),
+              Container(
+                // vector2mjA (1:6)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 6 * fem, 5.19 * fem, 0 * fem),
+                width: 17.36 * fem,
+                height: 13.41 * fem,
+                child: Image.asset(
+                  'assets/page-1/images/vector2.png',
+                  width: 17.36 * fem,
+                  height: 13.41 * fem,
+                ),
+              ),
+              Container(
+                // vector16Fe (1:8)
+                margin:
+                    EdgeInsets.fromLTRB(0 * fem, 6.79 * fem, 0 * fem, 0 * fem),
+                width: 24.46 * fem,
+                height: 13.41 * fem,
+                child: Image.asset(
+                  'assets/page-1/images/vector1.png',
+                  width: 24.46 * fem,
+                  height: 13.41 * fem,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
